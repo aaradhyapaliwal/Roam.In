@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#592e00",
+              "error-container": "#f95630",
+              "on-secondary-fixed-variant": "#006262",
+              "on-surface-variant": "#cbd5e1",
+              "primary-container": "#fe9832",
+              "surface-tint": "#ff9d00",
+              "surface-container-low": "rgba(30, 41, 59, 0.5)",
+              "on-primary-container": "#4d2700",
+              "tertiary": "#b70049",
+              "on-primary": "#fff0e6",
+              "surface-container-high": "rgba(255, 255, 255, 0.1)",
+              "surface-bright": "rgba(255, 255, 255, 0.15)",
+              "on-tertiary": "#ffeff0",
+              "surface-container-lowest": "rgba(15, 23, 42, 0.8)",
+              "tertiary-fixed-dim": "#ff7794",
+              "surface-container-highest": "rgba(255, 255, 255, 0.12)",
+              "inverse-surface": "#f8fafc",
+              "secondary-fixed": "#8dedec",
+              "on-background": "#ffffff",
+              "error": "#b02500",
+              "surface": "transparent",
+              "on-primary-fixed": "#291200",
+              "inverse-on-surface": "#94a3b8",
+              "primary-fixed-dim": "#ed8b24",
+              "surface-dim": "#1a1a2e",
+              "on-secondary-fixed": "#004343",
+              "on-tertiary-container": "#670025",
+              "on-surface": "#f8fafc",
+              "error-dim": "#b92902",
+              "surface-variant": "rgba(255, 255, 255, 0.05)",
+              "secondary-dim": "#005959",
+              "primary-fixed": "#fe9832",
+              "outline-variant": "#475569",
+              "on-secondary": "#bbfffe",
+              "background": "#0f172a",
+              "on-secondary-container": "#005858",
+              "on-error": "#ffefec",
+              "surface-container": "rgba(255, 255, 255, 0.08)",
+              "inverse-primary": "#fe9832",
+              "primary": "#ff9d00",
+              "secondary-fixed-dim": "#7fdede",
+              "tertiary-fixed": "#ff8fa4",
+              "secondary-container": "#8dedec",
+              "primary-dim": "#7a4100",
+              "on-tertiary-fixed-variant": "#77002d",
+              "tertiary-dim": "#a1003f",
+              "outline": "#94a3b8",
+              "on-error-container": "#520c00",
+              "secondary": "#006666",
+              "tertiary-container": "#ff8fa4",
+              "on-tertiary-fixed": "#390011"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        body {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 25%, #475569 50%, #5b7185 75%, #6f849c 100%);
+            background-attachment: fixed;
+        }
+        .vibrant-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 0% 0%, rgba(255, 157, 0, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.1) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface">
+<div class="vibrant-mesh"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-full bg-slate-900/60 backdrop-blur-xl border-b border-white/10 z-50 font-['Plus_Jakarta_Sans'] font-medium tracking-tight">
+<div class="flex items-center gap-2 transition-all duration-300 hover:opacity-80 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-2xl font-bold tracking-tighter text-white">Roam.In</span>
+</div>
+<div class="flex-1 flex justify-center">
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-slate-300 hover:text-primary transition-all duration-300 hover:opacity-80" href="../code.html">National</a>
+<a class="text-slate-300 hover:text-primary transition-all duration-300 hover:opacity-80" href="../States places/code.html">States</a>
+<a class="text-primary border-b-2 border-primary pb-1 transition-all duration-300 hover:opacity-80" href="#">Plan Trip</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-highest border-none rounded-full px-6 py-2 w-64 focus:ring-2 focus:ring-primary text-sm transition-all duration-300" placeholder="Search destinations..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-2 text-outline">search</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 hover:opacity-80 scale-95 active:scale-90">Sign In</button>
+</div>
+</nav>
+<!-- Hero / Trip Planner Canvas -->
+<main class="min-h-screen pt-24 pb-12">
+<!-- Vibrant Dynamic Background -->
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-tertiary-fixed-dim via-primary-container to-surface h-[819px] opacity-30"></div>
+<section class="max-w-7xl mx-auto px-6 lg:px-8 pt-12">
+<div class="flex flex-col items-center text-center mb-16">
+<span class="font-headline text-tertiary font-extrabold tracking-widest uppercase text-xs mb-4">The Digital Curator</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter mb-8 max-w-4xl">
+                    Your Next Adventure <span class="text-primary italic">Awaits</span>
+</h1>
+<!-- Futuristic Search Bar -->
+<div class="w-full max-w-3xl glass-panel p-2 rounded-full shadow-[0_20px_40px_rgba(45,45,66,0.1)] border border-white/40 flex items-center gap-4 group">
+<div class="pl-6 text-primary">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-xl font-headline placeholder:text-outline/60 py-4" placeholder="Enter the city for your next adventure" type="text"/>
+<button class="bg-primary hover:bg-primary-dim text-white w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-lg shadow-primary/20 mr-2">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid of Local Gems (Sample: Jaipur) -->
+<div class="mt-24">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight">Jaipur: The Pink City Gems</h2>
+<p class="text-on-surface-variant font-body mt-2">Curated heritage spots tailored for your journey.</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Main Featured Gem (Hawa Mahal) -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0_20px_40px_rgba(45,45,66,0.06)] h-[500px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="stunning architectural detail of Hawa Mahal at sunrise with warm pink sandstone glowing in natural sunlight and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhfvKRFdooJ-LYOJArGhJi6PN0XqmXNSOQE1vN5YQxDXAj9V6iuN745nBwc2VjbNyTLHwvuh0zradxrRpBGRv2t3rrqXwojHB2yrDm3qYFP0YNSqfYr4XbQ1Svb_Vpcjm_YSVq1WuiJ_y_HSezEwlAdINhwF1nhp_egmdFp68ma8Rzmu6QBevbq776d2XVaJDUwLPnJvxVcycMpVeEthBioZvuJX9xNixPN5KRxlUarsfcthfTngzrqIQT00LSvPE58sMPH5iklsHw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full flex justify-between items-end">
+<div class="max-w-md">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary-fixed fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-white font-bold">4.9</span>
+<span class="text-white/60 text-sm">(2.4k Reviews)</span>
+</div>
+<h3 class="font-headline text-4xl font-extrabold text-white tracking-tighter mb-2">Hawa Mahal</h3>
+<p class="text-white/80 font-body">The Palace of Winds, a honeycomb of 953 small windows designed for royal ladies to observe daily life.</p>
+</div>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-3 rounded-full font-headline font-bold hover:bg-white hover:text-on-surface transition-all">Explore Spot</button>
+</div>
+</div>
+<!-- Secondary Gem (Amer Fort) -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0_20px_40px_rgba(45,45,66,0.06)] h-[500px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="wide shot of the golden sandstone Amer Fort walls winding along a mountain ridge overlooking Maota Lake at midday" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOB-QRkrP5x8L7UgujkSfJ4ZaFV1P6ocW9ddPrCD576gmLstwfKLDYXZMKlLc5cC-uPPECsyS8aoDuH1hkwcXhl16DakLvP6ePBQgnnJ0K3nGuBdQ_KfRxjlJSusNtonCNM8Qc6DMM3k1HjfTNs1waPZCZ_glieRWOT_S3q3GOR36jYc8RsPQZxex5p56dHMN8f9LsOT6wwXmchcpunuY11D5hgJ5hhqJtQCoRBjufHVt53YSZmpugyfw7Jfq28xo0zFnq_AHstGQL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-fixed fill-current" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-white font-bold">4.8</span>
+</div>
+<h3 class="font-headline text-2xl font-extrabold text-white tracking-tight mb-2">Amer Fort</h3>
+<p class="text-white/70 text-sm font-body">A majestic hilltop fortress featuring intricate Hindu architectural elements and elephant rides.</p>
+</div>
+</div>
+<!-- Tertiary Gem (Patrika Gate) - Asymmetric Offset -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0_20px_40px_rgba(45,45,66,0.06)] h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="interior view of colorful arched walkway with hand-painted murals and vibrant patterns in Patrika Gate Jaipur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn8x4FmzcxOcRj_uNiHZOZUoSuzPnjKaW2pduz4ZZG20_iuhARhKSdFAwU2Chi2jNS9pVdU5HDD3pCDQu7aa4NcMV8ojeZ4sIBntdwu8QKjGxJzsz_S0wCBF1OdHk9hBPS8y0wfWf-qI6gVxNosb1c1saToGMz1QPzRLaJp4P8As29HQ0CI7FMYLgC96Y315f9EVKTsZJmZ8Q5iLBDrsBp4xJVs7w3dVyVMSZ5H5dyWLueMvYD5XPVd8yGcMBef5Sldmul2fCMPHg3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline text-2xl font-extrabold text-white tracking-tight mb-2">Patrika Gate</h3>
+<p class="text-white/70 text-sm font-body">A vibrant gateway serving as an Instagram-favorite entrance to Jawahar Circle garden.</p>
+</div>
+</div>
+<!-- Small Curated List (City Palace) -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0_20px_40px_rgba(45,45,66,0.06)] h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ornate turquoise and gold peacock gate within the City Palace Jaipur courtyard showing high craftsmanship" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIGSg66O2ma3vkdDG8F-89MdGJay8Vnynb-h_oulpC2uPjT9EpiUUQx447WqpNAt18E8RJRVJf9vizHh1yViZ4remYd040aAach1lLAdTPy75Ef4OFW05aGPej6-EDk9R9oqkLdZGdle99_4viemcaCCVvqwf1tyNaAmzmo5CBGWv6ODAlmDQU3EowG836XTU560nVfO2zHI0M0KEXP9I-iZkoFu3rpIeqfQxpws0-pIaya8XEOmet5cCAzCmxi74WaJMpS9XOZE-a"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<h3 class="font-headline text-2xl font-extrabold text-white tracking-tight mb-2">City Palace</h3>
+<p class="text-white/70 text-sm font-body">An opulent complex of courtyards, gardens, and buildings at the heart of the Old City.</p>
+</div>
+</div>
+<!-- Map Integration Placeholder -->
+<div class="md:col-span-4 rounded-xl bg-surface-container shadow-inner overflow-hidden flex flex-col relative h-[400px]">
+<div class="absolute inset-0 opacity-40 mix-blend-multiply" data-alt="abstract stylized topographic map of Jaipur city with orange and teal color accents" data-location="Jaipur" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM7RewpoqkgeNDavivcQAQVbf-G-2m6T2hp3A8zxyNAVLAbwNPaSlrSSeQ4BdRw1pSBXVZ01a6tvtm3Zahbe70_ZlooX0u5sQO_RKUCQ1cfRNn0Pgyr6Meuuuh8JYl95x_UlUg9n89qdceoiuyMRnPhyAY_jfIcjk-_9yKJQCymTPv21jc6oULaKSrF2yLR5k2RvMHuntLE9hfZ42J_KRrXVqrYHQYiUZlGiVjJMt1Tt2SvAs62s1dUhXNym5bJin-Cwz0DX0DNYCu')"></div>
+<div class="relative z-10 p-8 h-full flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-2xl font-extrabold text-primary tracking-tight">Route Map</h3>
+<p class="text-on-surface-variant text-sm mt-2">Optimal 3-day path through these local gems.</p>
+</div>
+<button class="w-full bg-white border border-outline-variant/20 py-4 rounded-xl font-headline font-bold text-on-surface hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">map</span>
+                                Download Itinerary
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Action Button - Plan Focus -->
+<div class="fixed bottom-12 right-12 z-40 hidden md:block">
+<a href="itinerary.html" class="flex items-center gap-4 bg-tertiary text-white pl-6 pr-4 py-4 rounded-full shadow-2xl shadow-tertiary/40 group transition-all hover:scale-105 active:scale-95">
+<span class="font-headline font-bold">Build Your Itinerary</span>
+<div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center bg-slate-50 dark:bg-slate-950 border-t border-slate-200/10 relative overflow-hidden">
+<span class="text-6xl font-black opacity-5 absolute bottom-0 left-0">Roam.In</span>
+<div class="flex flex-col gap-2 mb-8 md:mb-0">
+<h4 class="text-orange-700 dark:text-orange-400 font-headline font-bold text-lg">Roam.In</h4>
+<p class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400">© 2024 Roam.In Digital Silk Road. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400 hover:text-orange-500 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400 hover:text-orange-500 transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400 hover:text-orange-500 transition-colors" href="#">Contact Us</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-400 hover:text-orange-500 transition-colors" href="#">Cultural Heritage Guide</a>
+</div>
+<div class="flex gap-4 mt-8 md:mt-0">
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-size: 20px;">public</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-size: 20px;">share</span>
+</button>
+</div>
+</footer>
+</body></html>

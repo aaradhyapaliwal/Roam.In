@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roam.In | The Digital Silk Road</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "secondary-container": "#8dedec",
+              "error": "#b02500",
+              "tertiary": "#ff3d71",
+              "surface-dim": "#1a1a2e",
+              "primary": "#ff9d00",
+              "background": "#0f172a",
+              "primary-container": "#fe9832",
+              "surface-container-high": "rgba(255, 255, 255, 0.1)",
+              "on-primary-fixed-variant": "#592e00",
+              "on-secondary": "#002020",
+              "on-primary": "#000000",
+              "error-container": "#f95630",
+              "outline": "#94a3b8",
+              "on-tertiary-container": "#ffffff",
+              "surface": "transparent",
+              "on-primary-container": "#000000",
+              "tertiary-container": "#ff8fa4",
+              "primary-dim": "#e68a00",
+              "on-secondary-fixed-variant": "#006262",
+              "tertiary-dim": "#a1003f",
+              "tertiary-fixed-dim": "#ff7794",
+              "primary-fixed": "#fe9832",
+              "surface-container-lowest": "rgba(15, 23, 42, 0.8)",
+              "surface-container-low": "rgba(30, 41, 59, 0.5)",
+              "secondary-fixed": "#8dedec",
+              "on-secondary-fixed": "#004343",
+              "on-tertiary-fixed": "#390011",
+              "on-error-container": "#520c00",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "rgba(255, 255, 255, 0.05)",
+              "on-primary-fixed": "#291200",
+              "on-surface-variant": "#cbd5e1",
+              "inverse-primary": "#fe9832",
+              "on-secondary-container": "#005858",
+              "outline-variant": "#475569",
+              "secondary-dim": "#005959",
+              "tertiary-fixed": "#ff8fa4",
+              "inverse-on-surface": "#94a3b8",
+              "surface-tint": "#ff9d00",
+              "error-dim": "#b92902",
+              "surface-container": "rgba(255, 255, 255, 0.08)",
+              "on-surface": "#f8fafc",
+              "inverse-surface": "#f8fafc",
+              "primary-fixed-dim": "#ed8b24",
+              "secondary": "#2dd4bf",
+              "surface-bright": "rgba(255, 255, 255, 0.15)",
+              "on-error": "#ffefec",
+              "on-tertiary-fixed-variant": "#77002d",
+              "secondary-fixed-dim": "#7fdede",
+              "surface-container-highest": "rgba(255, 255, 255, 0.12)"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            background-attachment: fixed;
+        }
+        .vibrant-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 0% 0%, rgba(255, 157, 0, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.15) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface">
+<div class="vibrant-mesh"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-full bg-slate-900/60 backdrop-blur-xl border-b border-white/10 z-50 font-['Plus_Jakarta_Sans'] font-medium tracking-tight">
+<div class="flex items-center gap-2 transition-all duration-300 hover:opacity-80 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-2xl font-bold tracking-tighter text-white">Roam.In</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 transition-all duration-300 hover:opacity-80" href="#">National</a>
+<a class="text-slate-300 hover:text-primary transition-all duration-300 hover:opacity-80" href="States places/code.html">States</a>
+<a class="text-slate-300 hover:text-primary transition-all duration-300 hover:opacity-80" href="Plan Trip & Itenerary/code.html">Plan Trip</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="bg-white/10 border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary w-64 transition-all text-white placeholder-slate-400" placeholder="Search destinations..." type="text"/>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 hover:opacity-80 scale-95 active:scale-90">
+            Sign In
+        </button>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 w-64 hidden lg:flex flex-col p-4 bg-slate-900/40 backdrop-blur-lg border-r border-white/5 h-[calc(100vh-80px)] mt-20 font-['Plus_Jakarta_Sans'] text-sm z-40">
+<div class="mb-8 px-2">
+<h3 class="text-secondary font-bold text-lg">Explore Regions</h3>
+<p class="text-slate-400 text-xs">Select a state to begin</p>
+</div>
+<div class="space-y-2">
+<a class="flex items-center gap-3 p-3 text-slate-400 hover:bg-white/10 hover:translate-x-1 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">landscape</span>
+<span>North India</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-secondary/20 text-secondary font-bold rounded-lg hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined">temple_hindu</span>
+<span>South India</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-400 hover:bg-white/10 hover:translate-x-1 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">tsunami</span>
+<span>East India</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-400 hover:bg-white/10 hover:translate-x-1 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">wb_sunny</span>
+<span>West India</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-slate-400 hover:bg-white/10 hover:translate-x-1 transition-transform rounded-lg" href="#">
+<span class="material-symbols-outlined">castle</span>
+<span>Central India</span>
+</a>
+</div>
+</aside>
+<main class="lg:ml-64 pt-20">
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full overflow-hidden px-8 py-12 flex items-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="wide angle shot of the taj mahal at sunrise with warm golden light reflecting off the white marble and misty atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6QEimNyXPEbgKIooDD_Yw4xGESwYdKug8jd5p09pqTCaHjuTlzFU-avLqYQj1rtSu_K5D9d5Uu8GvgoTsLhcYclaNghw-lR6iBeWL8QVeUn8o3X86NUEOqa4YmSFw-1Fo55dbcU6vZpS9uVFPnIRaMISlBxs43eKKQ7hnIwBgTgyAizaARTIFulSl07AQkq1p4Bq0I3CMeVu1gX66yJ3ewBgFfoAWyYUplRtKkSnWtW9GCAgYwm0twuWUJxeY08aESTVmlCkXgL3W"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0f172a] via-[#0f172a]/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold uppercase tracking-widest bg-primary/20 text-primary rounded-full backdrop-blur-md border border-primary/30">
+                Curated Heritage Journeys
+            </span>
+<h1 class="font-headline text-7xl font-extrabold tracking-tighter text-white leading-tight mb-6">
+                Rediscover the <span class="text-primary">Digital</span> Silk Road.
+            </h1>
+<p class="text-lg text-slate-300 mb-10 leading-relaxed max-w-lg">
+                Experience India through a lens of premium precision. From the marble echoes of Agra to the emerald backwaters of Kerala.
+            </p>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-black px-8 py-4 rounded-full font-bold text-lg flex items-center gap-2 hover:opacity-90 transition-all shadow-[0_0_30px_rgba(255,157,0,0.3)]">
+                    Explore Destinations
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 rounded-full font-bold text-lg border border-white/20 text-white hover:bg-white/10 transition-all backdrop-blur-sm">
+                    View Heritage Guide
+                </button>
+</div>
+</div>
+<!-- Rotating Gallery Preview -->
+<div class="absolute right-8 bottom-12 z-20 flex gap-4">
+<div class="w-24 h-36 rounded-xl overflow-hidden border-2 border-primary shadow-2xl transition-transform hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="vertical architectural detail of the gateway of india in mumbai at dusk with city lights starting to twinkle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn_W2CQADccsx0njOPVNIhUe27GxT6BdyMdAAtWy9O6yJaC4VulZgsDvBWRNvPsU-QFWQ-VarJBnnJT2fV5VMiGhg8HnfO3mFHG1NKKW5bsJc-mgSiUFyu_HGIoO7FalbaYcXLEcMic4XmwBO0dhapqd7Az0_ccOwXgEDUTDZG7ploJthnidZ2giPYpUcyXV_w-sp32CDpPM2JXjzg7Y_hKMzL8bUKt5IR1hPT9-QfJT2bqtYiuNKiLLa77_aNeMxVI2FlVkQo1E3J"/>
+</div>
+<div class="w-24 h-36 rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl transition-transform hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="golden temple at amritsar reflecting in the surrounding water at twilight with vibrant deep indigo and gold colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG4YTDm3w4F1-8pjb_9EQIhiTCbqBoyuxhIFCiZyGwBRBbQkWLDRQSpjqvYTvPTwaLxPk05RhmDpgKX_XLQIpwHqTGl5LQmJnEm9kPzI7wdv6_BExHDEH_iZgSoX8Wr0k5fMSKlt1LGm1IxjmZY6qI4Zty2U_ZL3frdd0i0atJDOGaUr-o7XIxoekpqVua4BvFX4xHEFYSiJtS2i1GmFeijCy9J_e9xT6ywuOU6NYICVYFkcHdeo7xcOmCstqMGA1hyPr3MOb80ge2"/>
+</div>
+<div class="w-24 h-36 rounded-xl overflow-hidden border-2 border-white/20 shadow-2xl transition-transform hover:scale-105">
+<img class="w-full h-full object-cover" data-alt="snow capped mountains of the himalayas with crisp blue sky and a small tibetan monastery perched on a ridge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi6Cj3KM_ehqMbdf2qve32UVhOJk-Q3ibCW_7i0VWhC-NbcbzleHvGuRsNqM-Bsi1K3GV2mC68Ur77YB3HqEnSMvI5wjI2S7pStwyg3__LJWMYru60P8PaVu5hCGZI4I852P8PNuU1Pnq6uOQUIqt9Xf516U_GxnwJDwFfMr1nXyfATgq6bfk1Vc4sPivG5edTx09T9Q0RwoUv5fNRAAm8dJhC7Y01I5u-E63Ia-6sfyfBTkPj2YwZ5vZDAq2JTXINPsKCQg5Gyxy6"/>
+</div>
+</div>
+</section>
+<!-- National Level Tourist Spots Section -->
+<section class="px-8 py-24 relative">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline text-5xl font-extrabold tracking-tighter mb-4 text-white">National Treasures</h2>
+<p class="text-slate-300">Handpicked landmarks that define the subcontinental spirit. Modern framing for timeless legacies.</p>
+</div>
+<div class="flex gap-2">
+<button class="p-3 rounded-full border border-white/20 text-white hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-3 rounded-full bg-secondary text-black hover:opacity-90 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-[300px]">
+<!-- Heritage Overlay Component 1 -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl border border-white/10">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="the taj mahal at dawn with a soft lavender and pink sky with intricate marble details in sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCubdO1t6A3HeHCe9-IgPjtHd9qWE8MGbH03aXQfGMsFJqcZoOH1720ZCBNQBFZWzu3ZVWyMh89UH4El0Fo_F6lj2y3EvMSk-yNXowfX01owozEgW5iPYUTkpVsGg0B6rlIX88MJgZ3oyvCDuE57rmT2XOzqFRONtOEYKkJJTTjHEcuP-xbb4bfsl9j6KWNdyjYWETG38TpzIBTCjKrKme5C0MD_dnHR4ik62TD2HIabA7wpayds_qiBecnEBBvXEaEmeDYbKOsFM6z"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-primary uppercase tracking-widest text-xs font-bold font-label">Agra, Uttar Pradesh</span>
+</div>
+<h3 class="font-headline text-4xl font-extrabold text-white mb-3">The Taj Mahal</h3>
+<p class="text-white/80 line-clamp-2 max-w-md">An immense mausoleum of white marble, built between 1631 and 1648 by order of the Mughal emperor Shah Jahan.</p>
+</div>
+</div>
+<!-- Heritage Overlay Component 2 -->
+<div class="relative group overflow-hidden rounded-xl border border-white/10">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="detailed carvings of the hampi chariot temple against a clear blue sky with warm afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBonpfYBcNkbCfWcgAmIBGekBrTI1xJHW64QLw1ZKKkXY3M64TMQiZ1eny22lIZXeHvntFP2bKx3KQlWgCyJ1gx2Y4x66z3q8K1BrjSwAmQr4Mgii3Dak08Yi2Bx3JupeZpW_f6G86tydm0ktabfuQcbLWZILd-yFSxIFXkw13HaBFX3bqhEhpqU7346tcaCu1N-QmWPqZDExxNenzosZg4y2kP6B8kPYtA649BJ5eq6gsRbTOwGALo7U-Y4xjWEUeAaQe8jFimdcLK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="text-secondary text-xs font-bold uppercase tracking-tighter mb-1 block">Karnataka</span>
+<h4 class="font-headline text-xl font-bold text-white leading-tight">Hampi Ruins</h4>
+</div>
+</div>
+<!-- Heritage Overlay Component 3 -->
+<div class="relative group overflow-hidden rounded-xl border border-white/10">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="lush green tea plantations in munnar at sunrise with thick white mist settling in the valleys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO94yon4QKTgyFxnUZ-rUe4pZ6KuajbMpPQU7eqk0c2W_qOA3QcBgi6EqxhXHTB-Eg2rpCoTj85IL2FXt3I1Y3WIQiA9Of6EgLgOxJBseEZ6kRDLnSFJxFATXWpMFmKVGwVvIKmNH0FSJpUh0crN05VI30RMNARna9pM5ifSzrjABee4BzuncGI4GFfj1e2xXR7v_TTnv2hxjaJozSjAKYHp4hzzqkjrC2-Knok__uKJkN5gVBpWw0t-xvRjQt2fqq7xh_xvCObwBT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="text-secondary text-xs font-bold uppercase tracking-tighter mb-1 block">Kerala</span>
+<h4 class="font-headline text-xl font-bold text-white leading-tight">Munnar Valleys</h4>
+</div>
+</div>
+<!-- Vibrant Card Component -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-xl glass-panel">
+<div class="flex h-full flex-col md:flex-row">
+<div class="w-full md:w-1/2 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="overhead view of a colorful market in jaipur with spices and textiles in vibrant saffron and pink tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0h6_E_fTZQkTFBh17U_1wdxOPMMqdra3im6ia9q44L8DzlLihfi2ro6o17d3GonPHs4BRgAb1kjTW5uIQWogu85op7pZZAnu09PF8dgPDpmxhFENuqJvBR48Yip2FD8BIGPC2ijXrU9zsMejZMlExXVT5BRgIrVVFEuCdlZTCkb0pGTrtCP6nX7wyVqKiangE7yUgcoqI-rYVq7EX7jz6ZhnrVpUhkW87TauowhBHVA0fPHCYT2tzvpzuGcNkempLDoken8EkuU0g"/>
+</div>
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+<span class="text-primary font-bold text-xs uppercase tracking-widest mb-2">Iconic Experience</span>
+<h4 class="font-headline text-2xl font-extrabold text-white mb-4">The Pink City Markets</h4>
+<p class="text-slate-300 text-sm mb-6">Lose yourself in the vibrant saffron lanes of Jaipur's Old City, where heritage meets the pulse of modern trade.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 group/link" href="#">
+                            Discover more 
+                            <span class="material-symbols-outlined text-base transition-transform group-hover/link:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="px-8 py-24">
+<div class="bg-gradient-to-br from-indigo-900/40 to-slate-900/40 backdrop-blur-2xl border border-white/10 rounded-3xl p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary/20 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+<div class="relative z-10 max-w-xl text-center md:text-left">
+<h2 class="font-headline text-5xl font-extrabold tracking-tighter text-white mb-6 leading-tight">Ready to map your own Silk Road?</h2>
+<p class="text-lg text-slate-300 mb-8">Join thousands of curators exploring the richness of India's cultural landscape.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="bg-primary text-black px-10 py-4 rounded-full font-bold shadow-lg transition-transform hover:scale-105">Plan Your Trip</button>
+<button class="px-10 py-4 rounded-full border border-primary text-primary font-bold transition-transform hover:scale-105 backdrop-blur-sm">Request Concierge</button>
+</div>
+</div>
+<div class="mt-12 md:mt-0 relative z-10 hidden md:block">
+<div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl w-64 rotate-6 border border-white/20">
+<div class="w-full h-32 rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover" data-alt="colorful wooden fishing boats on a serene river at dusk with warm reflection on the water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsHxRjIJYWhsI9fIEbjMRmFGLe2_mj5kJlu0eeW-Zwc67kF7-i--kuYxxtIizjMu8RrkFpXwqaXvT_oZT3BqhDTnAmm2YxYr2xRyJNTXPNTrwDH1b91uThTCCRGMnPFv0sX2q6tf1JNr3eSLc3a5c4heW9rCWV2DGiq_CAgkd2sDxxyoOKo43RH588DiwL0omqjDcvao_v3rr3dxU0Amjujbxc3GmYUUdM4jCoQgbAmSTvMHV8IMYnyi4Qqv4QJCXUex5D4bDDLxHS"/>
+</div>
+<p class="text-xs font-bold text-primary uppercase mb-1">Coming Next</p>
+<h5 class="font-bold text-white">Ganga Aarti, Varanasi</h5>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center bg-slate-950/80 backdrop-blur-xl full-width relative overflow-hidden border-t border-white/5 font-['Inter'] text-xs uppercase tracking-widest">
+<!-- Giant Brand Logo Watermark -->
+<span class="text-6xl font-black opacity-10 absolute bottom-0 left-0 text-white select-none">Roam.In</span>
+<div class="z-10 flex flex-col md:flex-row gap-8 items-center">
+<div class="flex items-center gap-2 mb-4 md:mb-0">
+<span class="material-symbols-outlined text-primary text-2xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-lg font-bold text-white tracking-tighter lowercase">roam.in.</span>
+</div>
+<p class="text-slate-400">© 2024 Roam.In Digital Silk Road. All rights reserved.</p>
+</div>
+<div class="z-10 flex gap-8 mt-8 md:mt-0">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">Cultural Heritage Guide</a>
+</div>
+</footer>
+</body></html>

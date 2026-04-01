@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roam.In | Build Your Itinerary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#ffffff",
+              "secondary-container": "#8dedec",
+              "error": "#b02500",
+              "tertiary": "#ff3d71",
+              "surface-dim": "#1a1a2e",
+              "primary": "#ff9d00",
+              "background": "#0f172a",
+              "primary-container": "#fe9832",
+              "surface-container-high": "rgba(255, 255, 255, 0.1)",
+              "on-primary-fixed-variant": "#592e00",
+              "on-secondary": "#002020",
+              "on-primary": "#000000",
+              "error-container": "#f95630",
+              "outline": "#94a3b8",
+              "on-tertiary-container": "#ffffff",
+              "surface": "transparent",
+              "on-primary-container": "#000000",
+              "tertiary-container": "#ff8fa4",
+              "primary-dim": "#e68a00",
+              "on-secondary-fixed-variant": "#006262",
+              "tertiary-dim": "#a1003f",
+              "tertiary-fixed-dim": "#ff7794",
+              "primary-fixed": "#fe9832",
+              "surface-container-lowest": "rgba(15, 23, 42, 0.8)",
+              "surface-container-low": "rgba(30, 41, 59, 0.5)",
+              "secondary-fixed": "#8dedec",
+              "on-secondary-fixed": "#004343",
+              "on-tertiary-fixed": "#390011",
+              "on-error-container": "#520c00",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "rgba(255, 255, 255, 0.05)",
+              "on-primary-fixed": "#291200",
+              "on-surface-variant": "#cbd5e1",
+              "inverse-primary": "#fe9832",
+              "on-secondary-container": "#005858",
+              "outline-variant": "#475569",
+              "secondary-dim": "#005959",
+              "tertiary-fixed": "#ff8fa4",
+              "inverse-on-surface": "#94a3b8",
+              "surface-tint": "#ff9d00",
+              "error-dim": "#b92902",
+              "surface-container": "rgba(255, 255, 255, 0.08)",
+              "on-surface": "#f8fafc",
+              "inverse-surface": "#f8fafc",
+              "primary-fixed-dim": "#ed8b24",
+              "secondary": "#2dd4bf",
+              "surface-bright": "rgba(255, 255, 255, 0.15)",
+              "on-error": "#ffefec",
+              "on-tertiary-fixed-variant": "#77002d",
+              "secondary-fixed-dim": "#7fdede",
+              "surface-container-highest": "rgba(255, 255, 255, 0.12)"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 25%, #475569 50%, #5b7185 75%, #6f849c 100%);
+            background-attachment: fixed;
+        }
+        .vibrant-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 0% 0%, rgba(255, 157, 0, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.1) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface">
+<div class="vibrant-mesh"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 max-w-full bg-slate-900/60 backdrop-blur-xl border-b border-white/10 z-50 font-['Plus_Jakarta_Sans'] font-medium tracking-tight">
+<div class="flex items-center gap-2 transition-all duration-300 hover:opacity-80 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="text-2xl font-bold tracking-tighter text-white">Roam.In</span>
+</div>
+<div class="flex-1 flex justify-center">
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-slate-300 hover:text-primary transition-all duration-300 hover:opacity-80" href="../code.html">National</a>
+<a class="text-slate-300 hover:text-primary transition-all duration-300 hover:opacity-80" href="../States places/code.html">States</a>
+<a class="text-primary border-b-2 border-primary pb-1 transition-all duration-300 hover:opacity-80" href="code.html">Plan Trip</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-highest border-none rounded-full px-6 py-2 w-64 focus:ring-2 focus:ring-primary text-sm transition-all duration-300" placeholder="Search destinations..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-2 text-outline">search</span>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-6 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 hover:opacity-80 scale-95 active:scale-90">Sign In</button>
+</div>
+</nav>
+<main class="min-h-screen pt-24 pb-12">
+<section class="max-w-4xl mx-auto px-6 lg:px-8 pt-12">
+<div class="text-center mb-12">
+<h1 class="font-headline text-4xl md:text-6xl font-extrabold text-on-surface tracking-tighter mb-4">
+    Build Your <span class="text-primary italic">Itinerary</span>
+</h1>
+<p class="text-on-surface-variant text-lg">Customize your perfect journey through India's heritage</p>
+</div>
+<form class="space-y-8">
+<!-- Trip Details -->
+<div class="glass-panel p-8 rounded-xl">
+<h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Trip Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Destination</label>
+<select class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+<option>Select a city</option>
+<option>Delhi</option>
+<option>Jaipur</option>
+<option>Agra</option>
+<option>Mumbai</option>
+<option>Goa</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Trip Duration</label>
+<select class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+<option>Select duration</option>
+<option>1-2 days</option>
+<option>3-5 days</option>
+<option>1 week</option>
+<option>2 weeks</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Travel Dates</label>
+<input class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all" type="date"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Group Size</label>
+<select class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+<option>Select size</option>
+<option>Solo</option>
+<option>Couple</option>
+<option>Family (2-4)</option>
+<option>Group (5+)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Preferences -->
+<div class="glass-panel p-8 rounded-xl">
+<h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Preferences</h2>
+<div class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-on-surface mb-3">Interests</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Historical Sites</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Temples</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Nature</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Food</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Shopping</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Adventure</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Culture</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="checkbox" class="rounded border-outline/20 text-primary focus:ring-primary"/>
+<span class="text-sm">Photography</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-3">Budget Range</label>
+<div class="grid grid-cols-3 gap-3">
+<label class="flex items-center gap-2">
+<input type="radio" name="budget" value="budget" class="text-primary focus:ring-primary"/>
+<span class="text-sm">Budget</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="radio" name="budget" value="mid" class="text-primary focus:ring-primary"/>
+<span class="text-sm">Mid-range</span>
+</label>
+<label class="flex items-center gap-2">
+<input type="radio" name="budget" value="luxury" class="text-primary focus:ring-primary"/>
+<span class="text-sm">Luxury</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Special Requirements</label>
+<textarea class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all h-24 resize-none" placeholder="Any dietary restrictions, accessibility needs, or special requests..."></textarea>
+</div>
+</div>
+</div>
+<!-- Contact Info -->
+<div class="glass-panel p-8 rounded-xl">
+<h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Contact Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Full Name</label>
+<input class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all" type="text" placeholder="Your full name"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Email</label>
+<input class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all" type="email" placeholder="your@email.com"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Phone</label>
+<input class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all" type="tel" placeholder="+91 XXXXX XXXXX"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-on-surface mb-2">Preferred Contact Method</label>
+<select class="w-full bg-surface-container border border-outline/20 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+<option>Email</option>
+<option>Phone</option>
+<option>WhatsApp</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Submit -->
+<div class="text-center">
+<button type="submit" class="bg-gradient-to-r from-primary to-primary-dim text-on-primary px-12 py-4 rounded-full font-headline font-bold text-lg transition-all duration-300 hover:opacity-80 scale-95 active:scale-90 shadow-[0_0_30px_rgba(255,157,0,0.3)]">
+    Generate My Itinerary
+</button>
+</div>
+</form>
+</section>
+</main>
+</body>
+</html>
